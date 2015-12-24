@@ -1,0 +1,47 @@
+Deel 1:
+-Introductie
+	-Core idea(decentralized)
+		-faster
+		-smaller
+		-ease of branching/merging
+		-offline version controll
+		-real tags
+-basic functionality
+	-init/pull
+	-status
+	-add
+	-commit
+	-push
+	-log
+-Semi advanced
+	-revert
+	-branch
+	-merge
+-GUI tools
+	-intellij/eclipse
+	-tortoise
+	-git lab
+Deel 2:
+-Internals
+	-staging area, unversioned, versioned
+	-pointer based
+	-hashes vs version numbers
+	-rebase
+	-remote
+	-devoxx presentatie
+-Advanced flows
+	-Git flow
+	-development + stable branch + release branch
+
+
+
+
+
+svn checkout -> git clone 
+svn update -> git pull: git fetch + git merge
+svn commit -> git commit + git push
+svn log -> git log
+svn merge -> git merge/ git rebase
+svn copy //create branch or tag -> branch: git checkout, tag: git tag
+svn diff -> git diff
+svn blame -> git blame
