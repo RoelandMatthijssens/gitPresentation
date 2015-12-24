@@ -1,0 +1,412 @@
+\section{Definities}
+
+\begin{frame}
+\frametitle{Definities}
+\begin{block}{}
+Een verzameling $S$, uitgerust met een afbeelding $\cdot : S \times S \to S$ noemt men een \textbf{semigroep} als de afbeelding $(\cdot)$ associatief is. Of nog $(ab)c = a(bc)$ voor alle $a,b,c \in S$.
+\end{block}
+
+\begin{block}{}
+$x$ is een \textbf{neutraal element} als $\forall s \in S: sx = s = xs$. 
+
+$x$ is een \textbf{nulelement} als $\forall s \in S: sx = x = xs$. 
+\end{block}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{$M(n,\F)$}
+
+\begin{block}{}
+$M(n,\F) = \{ f : \F^n \to \F^n \; | \; f \text{ is lineair} \}$ is een semigroep met nulelement.
+\begin{enumerate}
+\item Samenstelling van lineaire functies is lineair.
+\item Samenstelling is associatief.
+\item We hebben een eenheid op $M(n,\F)$ (de identieke afbeelding).
+\item We hebben een nulelement op $M(n,\F)$ (de nul afbeelding).
+\end{enumerate}
+
+\end{block}
+
+\end{frame}
+
+
+%\begin{frame}
+%\frametitle{toevoegen van eenheid}
+%
+%\begin{block}{}
+%stel $S^1 = S \cup \{1\}$, breid de bewerking op $S$ uit:
+%$$ \cdot : S^1 \times S^1 \to S' : (a,b) \to \left\{ 
+%\begin{array}{cl} 
+%ab & a,b \in S \\
+%a & a \in S \\
+%b & b \in S \\
+%1 & 
+%\end{array}
+%\right. $$
+%\end{block}
+%
+%\begin{block}{}
+%Als $S$ al een neutraal element heeft stellen we $S^1 = S$
+%\end{block}
+%
+%\end{frame}
+
+
+\begin{frame}
+\frametitle{Nilpotente deelsemigroep}
+
+\begin{block}{}
+Zij $S$ een semigroep met nulelement $0$. $S' \subset S$ noemen we \textbf{nilpotent} als 
+$$\exists k \in \N : S'^k = \{ a_1...a_k \; | \; a_1, ..., a_k \in S' \} = \{0 \} $$
+De nilpotentie klasse $nd(S)$ is de kleinste $k \in \N$ zodat $S'^k = \{ 0\}$
+\end{block}
+
+\begin{block}{}
+We noemen een element $s \in S$ nilpotent als $s^k = 0$ voor een $k \in \N$.
+\end{block}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Vlaggen}
+
+\begin{block}{}
+Zij $V$ een eindig dimensionale vectorruimte. Een \textbf{vlag} $\mathcal{F}$ is een rij deel vectorruimten $V_i$ zodat 
+$$\{ 0 \} = V_0 \subsetneq V_1 \subsetneq ... \subsetneq V_k = V.$$ 
+We noemen $l(\mathcal{F}) = k$ de lengte van de vlag $\mathcal{F}$.
+
+\end{block}
+
+\begin{block}{}
+Een $\mathcal{F}$-basis is een basis $E = (e_1, ..., e_n)$ zodat $ \vect \{e_1, ..., e_{\dim(v_i)} \} = V_i$.
+\end{block}
+
+\end{frame}
+
+
+\section{Link tussen vlaggen en nilpotente semigroepen}
+
+\begin{frame}
+\frametitle{Definitie $\varphi(\mathcal{F})$ en $\psi(S)$}
+
+\begin{block}{}
+Associ\"eer met een vlag $\mathcal{F}$ de nilpotente deelsemigroep
+$$\varphi (\mathcal{F}) = \{ a \in M(n,\F) \; | \; \forall i :  a(V_i) \subset V_{i-1} \}$$
+van $M(n,\F)$.
+\end{block}
+
+\begin{block}{}
+Associ\"eer met een nilpotente deelsemigroep $S$ de vlag $\psi (S) $ gedefinieerd door:
+$$ \{0 \} \subsetneq \langle S^{r-1} (\F^n) \rangle \subsetneq \dots \subsetneq \langle S(\F^n)\rangle \subsetneq \F^n$$
+\end{block}
+
+\begin{block}{Eigenschap}
+$\varphi(\mathcal{F})$ is een nilpotente deelsemigroep, en $\psi(S)$ is een vlag in $\F^n$.
+\end{block}
+
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{$r$-maximale nilpotente deelsemigroepen}
+
+\begin{block}{}
+Beschouw
+$$N_r(S) = \{ S' \subset S \; | \; S' \text{ nilpotente semigroup, } nd(S') = r\}.$$
+We noemen $S'$ $r$-maximaal als $S'$ maximaal is in $N_r(S)$ voor de inclusie relatie. 
+\end{block}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{ $ $ }
+
+\begin{block}{Eigenschap}
+Zij $\mathcal{F}$ een vlag in $M(n,\F)$ van lengte $k$. Dan is $\varphi (\mathcal{F})$ een $k$-maximale nilpotente deelsemigroep, en voor elke $k$-maximale nilpotente deelsemigroep $S$ bestaat er een vlag $\mathcal{F'}$ zodat $\varphi (\mathcal{F}') = S$.
+\end{block}
+
+\begin{block}{}
+Dus de $k$-maximale nilpotente deelsemigroepen en de vlaggen van lengte $k$ staan in bijectief verband.
+\end{block}
+
+\end{frame}
+
+
+\section{Link tussen signature en isomorfisme}
+
+\begin{frame}
+\frametitle{Signature}
+
+\begin{block}{}
+Voor een vlag $\mathcal{F}$ van lengte $r$ stellen we 
+$$\sig(\mathcal{F}) = (d_1, ..., d_r)$$
+waar $d_i = \dim(V_i/V_{i-1})$.
+\end{block}
+
+\begin{block}{}
+Voor een $r$-maximale nilpotente deelsemigroep $S$ stellen we $\sig(S) = \sig(\psi(S))$.
+\end{block}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Voor $r = 2$}
+
+\begin{block}{}
+Als $\F$ eindig is en $S = \varphi(\mathcal{F})$, $T = \varphi(\mathcal{F'})$ $2$-maximale nilpotente deelsemigroepen zijn, dan zijn $T$ en $S$ isomorf als en slechts als 
+$$\{ \dim (V_1), \dim (V_1/V_2) \} = \{ \dim (W_1), \dim (W_1/W_2) \}.$$
+\end{block}
+
+\begin{block}{}
+Als $\F$ oneindig is, dan zijn alle $2$-maximale nilpotente semigroepen isomorf.
+\end{block}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Hoofdstelling}
+\begin{block}{Eigenschap}
+zij $S$ en $T$ $r$-maximaal nilpotente deelsemigroepen, met $r\geq 3$.
+\begin{enumerate}
+\item Als $\F$ eindig is, dan 
+$$\varphi(\mathcal{F}) \cong \varphi(\mathcal{F}') \Leftrightarrow \sig (\mathcal{F}) = \sig (\mathcal{F}').$$
+\item Als $\F$ oneindig is en $\sig (\mathcal{F}) = (k,1,l)$, dan 
+$$\varphi(\mathcal{F}) \cong \varphi(\mathcal{F}') \Leftrightarrow \sig(\mathcal{F}') = (k',1,l').$$
+\item Als $\F$ oneindig is, en $\sig(\mathcal{F)} \neq (k,1,l)$, dan 
+$$\varphi(\mathcal{F}) \cong \varphi(\mathcal{F}') \Leftrightarrow \sig(\mathcal{F}) = \sig(\mathcal{F}').$$
+\end{enumerate}
+
+\end{block}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Voor $\sig(\mathcal{F}) = (k,1,l)$}
+
+\begin{block}{Eigenschap}
+Zij $\F$ een oneindig veld. Zij $S$ en $T$ $3$-maximale nilpotente deelsemigroepen van $M(n,\F)$ met signature $(k,1,l)$ en $(k',1,l')$ met $k,l,k',l' > 1$. Dan zijn $S$ en $T$ isomorf.
+\end{block}
+
+\begin{block}{}
+Maak gebruik van de vorm van $A \in \varphi(\mathcal{F})$ om rechtstreeks een isomorfisme te definieren.
+\end{block}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{ $ $ }
+
+\begin{block}{}
+probeer de $d_i$ in $\sig(\mathcal{F})$ te caracterizeren door iets dat bewaard blijft onder isomorfisme van semigroepen. 
+\end{block}
+
+\begin{block}{}
+Zij $T$ een nilpotente deelsemigroep, en $A \in T$.
+
+$A$ is onontbindbaar als $\forall B,C \in T: A \neq BC$
+\end{block}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Relaties $\prec$ en $\ll$}
+
+\begin{block}{}
+Zij $X \subseteq M(n,\F)\setminus \{0\} $. 
+
+Stel voor $A,B \in X$, $A\prec_X B$ als 
+$$\forall C \in X : AC = 0 \Rightarrow BC = 0.$$
+
+Stel voor $A,B \in X$, $A \ll_X B $ als 
+$$\forall C \in X : CA = 0 \Rightarrow CB = 0.$$
+
+\end{block}
+
+\begin{block}{}
+$\prec$ en $\ll$ zijn preordes op $X$, ze zijn reflexief en transitief.
+\end{block}
+
+
+\end{frame}
+
+\begin{frame}
+\frametitle{ $ $ }
+
+\begin{block}{}
+Zij $\leq$ een partiele orde op $X$, $Y \subseteq X$. $Y$ is een ketting als 
+$$ \forall x,y \in Y : x \leq y \vee y \leq x .$$
+\end{block}
+
+\begin{block}{}
+Stel 
+$$m_y = \max \{ \card (Y) \; | \; Y \text{ is een ketting op } X, \forall x \in Y: y \leq x \}$$ 
+de diepte van $y$
+\end{block}
+
+\begin{block}{}
+Stel 
+$$M_{i}^{\leq} = \{ y \in X \; | \; m_y = i\}$$
+\end{block}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Super rank}
+
+\begin{block}{}
+Definieer verzamelingen
+$$K_{1,0} = M_{1}^{\prec} \cap M_{0}^{\ll}$$
+$$K_{0,1} = M_{0}^{\prec} \cap M_{1}^{\ll}$$
+$$K_{1,1} = \{ A \in M_{1}^{\prec} \cap M_{1}^{\ll} \; | \; TAT \neq 0  \}$$
+\end{block}
+
+\begin{block}{}
+Zij $A$ onontbindbaar voor $T$, als $A \in K_{1,0} \cup K_{0,1} \cup K_{1,1}$, dan stellen we $\supR (A) = 1$.
+\end{block}
+
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Super rank}
+
+\begin{block}{}
+$$K_{2,0} = M_{2}^{\prec} \cap M_{0}^{\ll}$$
+$$K_{0,2} = M_{0}^{\prec} \cap M_{2}^{\ll}$$
+$$K_{2,1} = \{ A \in M_{2}^{\prec} \cap M_{1}^{\ll} \; | \; TAT \neq 0  \}$$
+$$K_{1,2} = \{ A \in M_{1}^{\prec} \cap M_{2}^{\ll} \; | \; TAT \neq 0  \}$$
+$$K_{2,2} = \{ A \in M_{2}^{\prec} \cap M_{2}^{\ll} \; | \; TAT \neq 0; \forall B \in M(n,\F)$$
+$$ \text{ met } \supR(B) = 1 : TAT \neq TBT \}$$
+\end{block}
+
+\begin{block}{}
+Zij $A$ onontbindbaar voor $T$, Als $A \in K_{2,0} \cup K_{0,2} \cup K_{1,2} \cup K_{2,1} \cup K_{2,2}$. Dan stellen we $\supR(A) = 2$.
+\end{block}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Isorfisme bewaard $\supR$}
+
+\begin{block}{Eigenschap}
+Zij $T_1$ en $T_2$ twee deelsemigroepen van $M(n,\F)$, en $\phi :T_1 \to T_2$ een isomorfisme. Zij $A \in T_1$ een onontbindbaar element zodat $\supR(A) = 1$, dan is ook $\phi(A)$ onontbindbaar en $\supR(\phi(A)) = 1$.
+\end{block}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Uitbreiding $\supR$}
+
+\begin{block}{}
+Zij $A \in T\setminus \{0 \}$ een ontbindbaar element,
+\end{block}
+
+
+\begin{block}{}
+$$\supR(A) = 1$$
+$$\Leftrightarrow$$
+$$A = A_1...A_m, A_i \text{ onontbindbaar, } \exists i : \supR(A_i) = 1$$
+\end{block}
+
+\begin{block}{}
+$$\supR(A) = 2$$
+$$\Leftrightarrow$$
+$$\supR(A) \neq 1, A = A_1...A_m, A_i \text{ onontbindbaar, } $$
+$$\exists i : \supR(A_i) = 2$$
+\end{block}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{ $ $ }
+
+\begin{block}{Eigenschap}
+Zij $T_1$ en $T_2$ twee isomorfe $r$-maximale nilpotente deelsemigroepen van $M(n,\F)$, met $r \geq 3$. Schrijf $\sig(T_1) = (i_1, ..., i_r)$ en $\sig(T_2) = (j_1, ..., j_r)$. Dan is $i_l = j_l$ voor $2 \leq l \leq r-1$.
+\end{block}
+
+\begin{block}{}
+Door gebruik te maken van cardinaliteit van verzamelingen gedefini\"eerd aan de hand van $\supR$.
+\end{block}
+
+\end{frame}
+
+
+\section{Overige gevallen}
+
+\begin{frame}
+\frametitle{Overige gevallen}
+
+\begin{block}{}
+$S$ en $T$ twee isomorfe $r$-maximale nilpotente deelsemigroepen, met $\sig(S) = (i_1, ...,i_r)$.
+
+\begin{enumerate}
+\item $i_1 \geq 1, i_r \geq 2, \sum_{r-1}^{s=2} i_s \geq 1 $,
+\item $i_1 = 1, \sum_{r-1}^{s=2} i_s \geq 2 $,
+\item $r=3, i_1 = 1, i_3 = 1 $,
+\item $r=3, i_1 \geq 2, i_2 = 1, i_3 \geq 2 $ indien $\F$ eindig.
+\end{enumerate}
+
+\end{block}
+
+\begin{block}{}
+Blijft te tonen dat in deze gevallen ook $i_1 = j_1$ en $i_r = j_r$. 
+\end{block}
+
+\end{frame}
+
+
+\section{Einde}
+
+\begin{frame}
+\frametitle{{\color{blurred}Overige gevallen}}
+
+\begin{block}{}
+{\color{lightgray}$S$ en $T$ twee isomorfe $r$-maximale nilpotente deelsemigroepen, met $\sig(S) = (i_1, ...,i_r)$.}
+
+\begin{enumerate}[-]
+\item {\color{lightgray}$i_1 \geq 1, i_r \geq 2, \sum_{r-1}^{s=2} i_s \geq 1 $,}
+\item {\color{lightgray}$i_1 = 1, \sum_{r-1}^{s=2} i_s \geq 2 $,}
+\item {\color{lightgray}$r=3, i_1 = 1, i_3 = 1 $,}
+\item {\color{lightgray}$r=3, i_1 \geq 2, i_2 = 1, i_3 \geq 2 $ indien $\F$ eindig.}
+\end{enumerate}
+
+\end{block}
+
+\begin{block}{}
+{\color{lightgray}Blijft te tonen dat in deze gevallen ook $i_1 = j_1$ en $i_r = j_r$.}
+\end{block}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{{\color{blurred}Overige gevallen}}
+
+\begin{block}{}
+{\color{lightgray}$S$ en $T$ twee isomorfe $r$-maximale nilpotente deelsemigroepen, met $\sig(S) = (i_1, ...,i_r)$.}
+
+\begin{enumerate}[-]
+\item {\color{lightgray}$i_1 \geq 1, i_r \geq 2, \sum_{r-1}^{s=2} i_s \geq 1 $,}
+\item {\color{lightgray}$i_1 = 1, \sum_{r-1}^{s=2} i_s \geq 2 $,}
+\item {\color{lightgray}$r=3, i_1 = 1, i_3 = 1 $,}
+\item {\color{lightgray}$r=3, i_1 \geq 2, i_2 = 1, i_3 \geq 2 $ indien $\F$ eindig.}
+\end{enumerate}
+
+\end{block}
+
+\begin{block}{}
+{\color{lightgray}Blijft te tonen dat in deze gevallen ook $i_1 = j_1$ en $i_r = j_r$.}
+\end{block}
+
+\end{frame}
