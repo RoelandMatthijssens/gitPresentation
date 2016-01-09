@@ -7,11 +7,11 @@ Deel 1:
 		-offline version controll
 		-real tags
 -basic functionality
-	-init/pull
+	-init/clone
 	-status
-	-add
+	-add/ignore
 	-commit
-	-push
+	-push/pull
 	-log
 -Semi advanced
 	-revert
