@@ -1,0 +1,23 @@
+git init demoApp
+cd demoApp
+echo "SomeInitialContent" >> someFile.txt
+git status
+git add someFile.txt
+git status
+git commit -m "message"
+git status
+git log
+
+git checkout -b "somebranch"
+git branch
+echo "Some Content on the branch" >> someFile.txt
+git diff
+git add .
+git commit -m "changes on branch"
+git checkout master
+git branch -d somebranch
+#warnings
+git merge somebranch
+git branch -d somebranch
+git branch
+
