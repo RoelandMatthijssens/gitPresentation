@@ -1,0 +1,39 @@
+\begin{frame}[fragile]
+	\frametitle{Git Object Hashmap}
+	\begin{block}{}
+		\begin{itemize}
+			\item internal storage git (./.git/objects/)
+			\item all content that represents history is stored here, ALL!
+			\item stored in a hashmap of sha1 keys to content of objects
+			\item different types of objects
+		\end{itemize}
+	\end{block}
+
+	\begin{lstlisting}
+$ git cat-file -p <hash>
+	\end{lstlisting}
+
+\note[itemize]{
+	\item git history is represented by a series of objects stored in a hashmap
+	\item the structure of the repo is represented by having the objects point to the keys of different objects in the hashmap
+}
+\end{frame}
+
+\begin{frame}[fragile]
+	\begin{lstlisting}
+$ tree .git/objects
+.git/objects/
+| 9d/
+|   `-- aeafb9864cf43055ae93beb0afd6c7d144bfa4
+`-- info/
+`-- pack/
+
+3 directories, 1 file
+	\end{lstlisting}
+
+\note[itemize]{
+	\item Here is where you can find them, they exists on disk
+	\item the whole history of the repo is here, on disk,
+	\item no network required. (this is why)
+}
+\end{frame}

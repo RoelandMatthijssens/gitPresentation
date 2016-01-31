@@ -1,0 +1,93 @@
+\documentclass[12pt]{beamer}
+
+\mode<presentation> {
+	\usetheme[blue,compress,numbers,nonav,nologo]{Trondheim}
+	\usefonttheme[onlymath]{serif}
+	\setbeamercovered{transparent}
+}
+
+%\usepackage{vub-beamer}
+%\usepackage{vub_theme}
+
+\setbeamertemplate{blocks}[rounded][shadow=true]
+
+% The following makes latex use nicer postscript fonts.
+\usepackage{times}
+
+% zorg dat het ganse document in sans-serif is
+\renewcommand{\familydefault}{\sfdefault}
+\newcommand{\xmark}{\ding{55}}
+\newcommand{\cmark}{\ding{51}}
+
+% Math support
+\usepackage{pifont}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\setbeamertemplate{navigation symbols}{}%remove navigation symbols
+
+%found. 
+\usepackage{verbatim}
+
+% put all math stuff in sans-serif
+%\usepackage{sansmath}
+%\sansmath
+
+% Misc
+%\usepackage[colorlinks,urlcolor=black,linkcolor=black,citecolor=black]{hyperref}
+\usepackage{listings} % source listings
+%\usepackage{multirow}
+%\usepackage[times]{quotchap}
+%\usepackage{setspace}
+
+% Special words that latex has problem hyphenating.
+\hyphenation{}
+
+%\settaakheader
+\title{GIT}
+\subtitle{An Introduction}
+\author{Roeland Matthijssens \& Bert Van Horenbeek}
+\institute[] {Osudio}
+\date[] {1 February 2016}
+\subject{Beamer}
+
+\usepackage{graphicx}
+\usepackage{latexsym}
+\usepackage{indentfirst}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{tikz}
+%\usepackage{amssymb}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\K}{\mathbb{K}}
+\renewcommand{\H}{\mathbb{H}}
+\renewcommand{\O}{\mathbb{O}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\ltwee}{\mathnormal{l} ^2}
+
+\newcommand{\dr}{\triangle}
+\newcommand{\ring}{\C [\dr]}
+
+\newcommand{\vect}{\mathrm{vect}}
+\newcommand{\proj}{\mathrm{proj}}
+\newcommand{\im}{\mathrm{Im}}
+\newcommand{\ch}{\mathrm{char}}
+\newcommand{\sig}{\mathrm{sig}}
+\newcommand{\rang}{\mathrm{rang}}
+\newcommand{\card}{\mathrm{card}}
+\newcommand{\supR}{\mathrm{supR}}
+\newcommand{\ann}{\mathrm{Ann}}
+
+\definecolor{blurred}{rgb}{0.36,0.40,0.72}
+\definecolor{dgreen}{rgb}{0.,0.6,0.}
+\setbeamertemplate{background}{}
+\begin{document}
+	\input{content}
+\end{document}

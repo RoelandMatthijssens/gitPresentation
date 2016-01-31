@@ -29,13 +29,20 @@ Deel 2:
 	-rebase
 	-remote
 	-devoxx presentatie
+! Lees chapter 9 in https://git-scm.com/book/en/v1/Git-Internals
+! Roeland => slides met images
+! Bert presenteert op basis van images
+
 -Advanced flows
 	-Git flow
 	-development + stable branch + release branch
+!present this by showing a demo of specific branching scenarios described here: https://www.atlassian.com/git/tutorials/comparing-workflows/centralized-workflow/
+!Roeland slides + scenario in bash history -> 2 sides
+!Bert during presentation run git l to show progress in flow. + explain what is happening based on schematic images in slides.
 
-
-
-
+MAANDAG
+-------
+Voormiddag scenario overlopen en dryrun
 
 svn checkout -> git clone 
 svn update -> git pull: git fetch + git merge

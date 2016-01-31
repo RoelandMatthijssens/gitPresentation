@@ -1,0 +1,42 @@
+\begin{frame}
+	\frametitle{gitflow}
+	\includegraphics[width=\textwidth]{images/gitflow.png}
+\end{frame}
+
+\begin{frame}
+	\frametitle{gitflow branches}
+	\begin{block}{}
+	\begin{itemize}
+		\item master, develop (ever present)
+
+		\item feature branch (each jira ticket)
+		\item hotfix branch (production issues)
+		\item release branch (only showstopper)
+	\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{gitflow rules}
+	\begin{block}{}
+	\begin{itemize}
+		\item feature branch:
+		\begin{itemize}
+			\item from develop
+			\item to develop
+		\end{itemize}
+
+		\item hotfix branch:
+		\begin{itemize}
+			\item from master
+			\item to master and develop (develop will also need this fix)
+		\end{itemize}
+
+		\item release branch:
+		\begin{itemize}
+			\item from develop
+			\item to master and develop
+		\end{itemize}
+	\end{itemize}
+	\end{block}
+\end{frame}
