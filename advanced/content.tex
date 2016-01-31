@@ -1,0 +1,71 @@
+\begin{frame}
+ \titlepage
+\end{frame}
+
+\section{Internals}
+
+	\subsection{Git Object Hashmap}
+	\input{./slides/gitObjectHashmap.tex}
+
+	\subsection{Git Objects}
+	\input{./slides/gitObjects.tex}
+
+	\subsection{branches are not objects, what is head}
+	\input{./slides/branches.tex}
+
+	\subsection{tags}
+	\input{./slides/tags.tex}
+
+	\subsection{demo}
+	\input{./slides/demo.tex}
+
+
+\section{Cases}
+
+	\input{./slides/revert.tex}
+	\input{./slides/rebase.tex}
+
+\section{Interactive}
+
+% -- \begin{frame}
+% -- 	\begin{itemize}
+% -- 		% Begin met bestaande repo, live clone?
+% -- 		\item toon .git/objects
+% -- 		\item pack file + info file
+% -- 		\item git add voegt file toe in objects (niet on commit, on add)
+% -- 		\item git staging
+% -- 		\item `git gc` (files toegevoegd zijn WEG, oh noez)
+% -- 		\item git commit voegt tree bij en commit bij
+% -- 			- branch moves forward (`cat .git/refs/heads/branch-name`)
+% -- 		\item merge
+% -- 			- toon dat `git cat-file -p commit-hash` meerdere parents heeft
+% -- 			- contrast `git cat-file -p non-merge-commit-hash`
+% -- 			- octoppus merges
+% -- 			- ORDE IS BELANGRIJK, kijk welke branch moved.
+% -- 			- (side note ook u hash gaat anders zijn.)
+% -- 		\item references naar commits (head~ head~n, head\^, head\^2)
+% -- 			- chainable (head~\^2~3) (tree-ish)
+% -- 		\item reflog
+% -- 			- haal 'verloren' \{commits,files, ...\} terug,
+% -- %			- head@{1}, branch@{1}, branch@{two days ago}
+% -- %		\item remotes (origin no clone), tracking branches.
+% -- %			- (git branch --set-upstream-to=origin/remote-branch-name)
+% -- %			- git push remote local-branch-name:remote-branch-name
+% -- %			- git fetch \&\& git checkout branch-name # remote heeft branchname,
+% -- %			  dan branch tracked remote automatische.
+% -- %			- git fetch -p || git fetch --prune (als remote tracking branch verwijdern,
+% -- %			  local ook)
+% -- %		\item multiple remotes
+% -- 	\end{itemize}
+% -- \end{frame}
+
+
+\section{Gitflow}
+	\input{./slides/gitflow.tex}
+
+	\subsection{Scenarios}
+	\input{./slides/scenarios.tex}
+
+	\subsection{demo}
+	\input{./slides/demo.tex}
+

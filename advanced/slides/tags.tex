@@ -1,0 +1,22 @@
+\begin{frame}
+	\frametitle{Tags vs Anotated Tags}
+
+	\begin{block}{Tags}
+		\begin{itemize}
+			\item comparable to branch, can not be commit on
+			\item located in .git/refs/tags
+			\item does not create git objects
+		\end{itemize}
+	\end{block}
+
+	\begin{block}{Anotated Tags}
+		\begin{itemize}
+			\item comparable to branch, can not be commit on
+			\item has tagger, time and message
+			\item can be cryptographically signed! (REAL TAGS)
+			\item does create git objects (`git cat-file -p <tag-name>`)
+			\item will be used for releases.
+		\end{itemize}
+	\end{block}
+
+\end{frame}

@@ -1,0 +1,54 @@
+\begin{frame}
+	\frametitle{You are implementing a feature.}
+
+	\begin{block}{}
+	\begin{itemize}
+		\item create branch ('feature/JIRA-547')
+		\item commit, commit, commit, ..., revert, commit again
+		\item keep running unit tests
+		\item create pull request
+		\item reviewer merges back into develop
+		\item ci deploys develop to TST
+	\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{feature pull request breaks CI build}
+
+	\begin{block}{}
+	\begin{itemize}
+		\item merge develop in feature/JIRA-547
+		\item commit, commit, commit, ... (hopefully fixing stuff)
+		\item reopen pull request
+		\item rinse and repeat
+	\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Preparing for a new release}
+	\begin{block}{}
+	\begin{itemize}
+		\item branch from develop ('release/release-version')
+		\item deploy release branch to ACC
+		\item have customer test everything
+		\item fix showstoppers on release branch
+		\item merge into master and back into develop
+		\item tag merge commit on master branch
+	\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Production goes down}
+	\begin{block}{}
+	\begin{itemize}
+		\item branch from master ('hotfix/issue-description')
+		\item commit, commit, commit, ...
+		\item merge into master and develop
+		\item tag merge commit on master branch
+		\item deploy master to PRD
+	\end{itemize}
+	\end{block}
+\end{frame}
